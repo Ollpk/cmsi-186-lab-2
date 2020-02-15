@@ -1,3 +1,5 @@
+import java.util.concurrent.ThreadLocalRandom;
+
 public class PiEstimator {
 
     public static void main(String[] args) {
@@ -24,22 +26,29 @@ public class PiEstimator {
     }
 
     public static double estimate(int darts) {
-      double[] specificThrow;
-        for (int i = 0; i < darts; i++) {
-      specificThrow[i] =  (Math.PI / 4);
-        }
-        double resolved = 1 - Math.pow(((4 - Math.PI)/4), darts);
+     double[] dartThrows = new double [darts];
+     double sumofDarts = 0.0;
+     double sumofArea = 4.0 * darts;
+     for (int i = 0; i < darts; i++) { 
+         dartThrows[i] = ThreadLocalRandom.current().nextDouble(0.0, 4.0 + 1);
+         sumofDarts += dartThrows[i];
+           
+         }
+    double result = sumofDarts / sumofArea * 4;
+    System.out.println(result);
 
-        //
-        // TODO: Do the main work here. I've just returned 0.0 as a place holder
-        // so the code compiles. It isn't right though. Remove the return here and
-        // implement the whole method on your own.
-        //
-        return resolved;
-    }
+    
+   
+     
+ return result;
+
+} 
+}
+
+    
 
     //
     // Don't be afraid to put in some private "helper" methods. You don't have to, of
     // course, but they could be useful and keep your code modular.
     //
-}
+
