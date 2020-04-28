@@ -1,7 +1,2 @@
-# CMSI 186 Lab 2 Virtual Darts Starter Code
-
-This repository contains some unfinished Java programs that you are complete.
-
-Import this repository into a new repository of your own and write the code according to the lab [instructions](https://cs.lmu.edu/~ray/classes/plab/lab/2/). Use the provided test scripts.
-
-In your new repository, don’t forget to edit this README file, as _your_ repository will certainly not contain any unfinished Java programs.
+In this repository, I wrote a program that is able to simulate the experiencing of calculating pi based on knowing that the area of the unit circle is pi. In knowing this, it allows me to then know conceptualize the situation in terms of darts, where the probability of darts that are thrown landing inside of the target circl (which inhibits a square) is the area of the circle divided by the area of the square (equaling pi / 4). Thus, this program enables for any number of darts that are thrown to bring an estimation and calculation of pi based on how many darts that are thrown. The more darts that are thrown, the more accurate the estimation is as it works to fill the bounds of the square. 
+However, there is another program in this respository ( SharedBirthday.java) which runs in trials to calculate the probability that  someone and a certain amount of people within a certain amount of time have a shared birthday. It predicts the odds and over more trials, the ratio becomes more and more accurate in its prediction. 
