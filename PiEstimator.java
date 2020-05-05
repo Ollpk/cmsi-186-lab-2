@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class PiEstimator {
 
     public static void main(String[] args) {
@@ -5,31 +7,45 @@ public class PiEstimator {
             if (args.length != 1) {
                 throw new IllegalArgumentException("Exactly one argument required");
             }
-            //
-            // TODO: Parse the command line argument and call your estimate function
-            //
+            int darts = Integer.parseInt(args[0]);
+            if (Integer.parseInt(args[0]) == 0) {
+                System.err.println("At least one dart required");
+            }
+            System.out.println(estimate(darts));
         } catch (NumberFormatException e) {
-            //
-            // TODO: Take care of a possible non-integer argument.
-            //
+            System.err.println("Argument must be an integer");
+
         } catch (IllegalArgumentException e) {
-            //
-            // TODO: Take care of the exception you threw above.
-            //
+            System.err.println("Exactly one argument required");
+
         }
     }
 
     public static double estimate(int darts) {
-        //
-        // TODO: Do the main work here. I've just returned 0.0 as a place holder
-        // so the code compiles. It isn't right though. Remove the return here and
-        // implement the whole method on your own.
-        //
-        return 0.0;
+        double x;
+        double y;
+        double result;
+        int numberInside = 0;
+        int tries = 0;
+        if (darts < 1) {
+            throw new IllegalArgumentException("At least one dart required");
+        }
+
+        for (int i = 0; i < darts; i++) {
+            Random r = new Random();
+            x = 2 * r.nextDouble() - 1;
+            y = 2 * r.nextDouble() - 1;
+            if (x * x + y * y < 1) {
+                numberInside++;
+
+            }
+            tries = tries + 1;
+
+        }
+        result = (double) numberInside / tries;
+
+        return (double) 4.0 * result;
+
     }
 
-    //
-    // Don't be afraid to put in some private "helper" methods. You don't have to, of
-    // course, but they could be useful and keep your code modular.
-    //
 }
