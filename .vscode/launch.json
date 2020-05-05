@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BirthdayTest<cmsi-186-lab-2_c4d9ac56>",
+            "request": "launch",
+            "mainClass": "BirthdayTest",
+            "projectName": "cmsi-186-lab-2_c4d9ac56"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PiEstimator<cmsi-186-lab-2_c4d9ac56>",
+            "request": "launch",
+            "mainClass": "PiEstimator",
+            "projectName": "cmsi-186-lab-2_c4d9ac56"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PiTest<cmsi-186-lab-2_c4d9ac56>",
+            "request": "launch",
+            "mainClass": "PiTest",
+            "projectName": "cmsi-186-lab-2_c4d9ac56"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SharedBirthday<cmsi-186-lab-2_c4d9ac56>",
+            "request": "launch",
+            "mainClass": "SharedBirthday",
+            "projectName": "cmsi-186-lab-2_c4d9ac56"
+        }
+    ]
+}
